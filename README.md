@@ -8,7 +8,7 @@ Installation
 
     npm install mishear
 
-(This can take a while because its dependences need to build a few databases.)
+(This can take a while because its dependencies need to build a few databases.)
 
 Usage
 -----
