@@ -1,6 +1,6 @@
 var hph = require('homophonizer');
 var phomophonizer = hph.phoneme.createHomophonizer();
-var mhomophonizer = hph.metaphone.createHomophonizer();
+// var mhomophonizer = hph.metaphone.createHomophonizer();
 var WordPOS = require('wordpos');
 var wordpos = new WordPOS();
 var async = require('async');
@@ -17,8 +17,8 @@ function mishear(word, doneMishearing) {
       getPhonemes,
       getImperfectHomophonesForPhonemeString,
       savePhonemeHomophones,
-      getMetaphoneHomophones,
-      saveMetaphoneHomophones,
+      // getMetaphoneHomophones,
+      // saveMetaphoneHomophones,
       getPOSMatchingHomophones
     ],
     doneMishearing
@@ -51,22 +51,22 @@ function mishear(word, doneMishearing) {
     );
   }
 
-  function getMetaphoneHomophones(done) {
-    mhomophonizer.getHomophones(word, done);
-  }
+  // function getMetaphoneHomophones(done) {
+  //   mhomophonizer.getHomophones(word, done);
+  // }
 
   function savePhonemeHomophones(theHomophones, done) {
     homophones = homophones.concat(theHomophones.filter(isNotOriginalWord));
     callNextTick(done);
   }
 
-  function saveMetaphoneHomophones(theHomophones, done) {
-    homophones = homophones.concat(
-      theHomophones.primary.filter(isNotOriginalWord)
-    );
-    // TODO: Think about including secondary?
-    callNextTick(done);
-  }
+  // function saveMetaphoneHomophones(theHomophones, done) {
+  //   homophones = homophones.concat(
+  //     theHomophones.primary.filter(isNotOriginalWord)
+  //   );
+  //   // TODO: Think about including secondary?
+  //   callNextTick(done);
+  // }
 
   function getPOSMatchingHomophones(done) {
     wordpos.getPOS(homophones.join(' '), matchHomophonesByPOS);
