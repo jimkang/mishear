@@ -13,7 +13,8 @@ Installation
 Usage
 -----
 
-    var mishear = require('mishear');
+    var createMishear = require('mishear');
+    var mishear = createMishear();
 
     mishear('running', logMishearings);
 
@@ -29,6 +30,8 @@ Usage
 Output:
 
     ['RUINING', 'RAINING', 'REIGNING', 'RENEWING']
+
+You can pass to `createMishear` an instance of [probable](https://github.com/jimkang/probable) that is configured the way you want. This is useful for producing deterministic results for tests.
 
 Tests
 -----

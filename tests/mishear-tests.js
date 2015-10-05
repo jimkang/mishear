@@ -1,5 +1,7 @@
 var test = require('tape');
-var mishear = require('../mishear');
+var createMishear = require('../mishear');
+var seedrandom = require('seedrandom');
+var createProbable = require('probable').createProbable;
 
 var testCases = [
   {
@@ -41,6 +43,14 @@ var testCases = [
     mishearings: []
   }
 ];
+
+var probable = createProbable({
+  random: seedrandom('test')
+});
+
+var mishear = createMishear({
+  probable: probable
+});
 
 testCases.forEach(runTest);
 
