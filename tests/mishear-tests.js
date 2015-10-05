@@ -6,7 +6,7 @@ var createProbable = require('probable').createProbable;
 var testCases = [
   {
     word: 'pope',
-    mishearings: [ 'DOPE', 'COPE', 'TOPE', 'POP', 'PAP', 'PUP', 'PIPE', 'PIP', 'PEP', 'PEEP', 'POOP', 'POKE', 'POLK' ]
+    mishearings: [ 'COPE', 'DOPE', 'PAP', 'PEEP', 'PEP', 'PIP', 'PIPE', 'POKE', 'POLK', 'POOP', 'POP', 'PUP', 'TOPE' ]
     // With metaphones:
     // mishearings: [ 'DOPE', 'COPE', 'TOPE', 'POP', 'POPPY', 'PAP', 'PAPA', 'PAPAW', 'PAPAYA', 'PAPPA', 'PAPUA', 'PUP', 'PUPA', 'PUPPY', 'PIPE', 'PIP', 'PEP', 'PEEP', 'POOP', 'POKE', 'POLK', 'BABA', 'BABE', 'BABU', 'BABY', 'BEEP', 'BIB', 'BOB', 'BOBBY', 'BOOB', 'BOOBY', 'BOP', 'PUB' ]
   },
@@ -28,7 +28,7 @@ var testCases = [
   },
   {
     word: 'conan',
-    mishearings: [ 'BOHNEN', 'CONNAN', 'CONNON', 'KANNAN', 'KANAN', 'KANON', 'KONEN', 'CANNAN', 'CANAN', 'CUNNANE', 'KENNON', 'KENAN', 'KERNAN', 'KERNEN', 'KIRNAN', 'KINNAN', 'KEENAN', 'KIENAN', 'KUENNEN', 'COONAN', 'COMAN', 'KOMAN' ]
+    mishearings: [ 'BOHNEN', 'CANAN', 'CANNAN', 'COMAN', 'CONNAN', 'CONNON', 'COONAN', 'CUNNANE', 'KANAN', 'KANNAN', 'KANON', 'KEENAN', 'KENAN', 'KENNON', 'KERNAN', 'KERNEN', 'KIENAN', 'KINNAN', 'KIRNAN', 'KOMAN', 'KONEN', 'KUENNEN' ]
     // With metaphones:
     // mishearings: [ 'BOHNEN', 'CONNAN', 'CONNON', 'KANNAN', 'KANAN', 'KANON', 'KONEN', 'CANNAN', 'CANAN', 'CANANEA', 'CANIN', 'CANINO', 'CANION', 'CANNONE', 'CANONIE', 'CUNNANE', 'CUNNEEN', 'KENNON', 'KENAN', 'KENYEN', 'KENYON', 'KERNAN', 'KERNEN', 'KIRNAN', 'KINNAN', 'KINION', 'KINYON', 'KEENAN', 'KIENAN', 'KUENNEN', 'COONAN', 'COMAN', 'KOMAN', 'COENEN', 'GAGNON', 'GANNON', 'GOONAN', 'GUINAN', 'KOEHNEN', 'KOENEN', 'KOHNEN', 'KUNIN', 'QUEENAN', 'QUINON' ]
   },

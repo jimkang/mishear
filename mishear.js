@@ -96,7 +96,7 @@ function createMishear(opts) {
         var matchingHomophones = _.union.apply(
           _.union, _.values(homophonesForMatchingPOS)
         );
-        done(null, matchingHomophones);
+        done(null, matchingHomophones.sort());
       }
     }
 
