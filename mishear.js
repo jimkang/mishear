@@ -78,7 +78,7 @@ function createMishear(opts) {
       homophones = homophones.concat(
         theHomophones
           .filter(isNotOriginalWord)
-          .filter(isNotSingleLetterNonsense)
+          .filter(hasNoApostrophes)
       );
       callNextTick(done);
     }
