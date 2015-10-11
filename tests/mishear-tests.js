@@ -41,6 +41,10 @@ var testCases = [
   {
     word: 'conference',
     mishearings: []
+  },
+  {
+    word: 'years',
+    mishearings: []
   }
 ];
 

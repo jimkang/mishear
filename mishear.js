@@ -74,7 +74,12 @@ function createMishear(opts) {
     // }
 
     function savePhonemeHomophones(theHomophones, done) {
-      homophones = homophones.concat(theHomophones.filter(isNotOriginalWord));
+      debugger;
+      homophones = homophones.concat(
+        theHomophones
+          .filter(isNotOriginalWord)
+          .filter(isNotSingleLetterNonsense)
+      );
       callNextTick(done);
     }
 
@@ -110,6 +115,10 @@ function createMishear(opts) {
 
 function getPosition(ph, i) {
   return i;
+}
+
+function hasNoApostrophes(word) {
+  return word.indexOf('\'') === -1;
 }
 
 module.exports = createMishear;
