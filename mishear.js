@@ -74,7 +74,6 @@ function createMishear(opts) {
     // }
 
     function savePhonemeHomophones(theHomophones, done) {
-      debugger;
       homophones = homophones.concat(
         theHomophones
           .filter(isNotOriginalWord)
