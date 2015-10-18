@@ -33,6 +33,8 @@ Output:
 
 You can pass to `createMishear` an instance of [probable](https://github.com/jimkang/probable) that is configured the way you want. This is useful for producing deterministic results for tests.
 
+You can try running it from a terminal by running `node tools/run-mishear.js <your word here>`.
+
 Tests
 -----
 
